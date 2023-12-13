@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="main-game">
+        <main class="quetion-box">
+          <h2 class="quetion" id="quetion">what is the best in the word</h2>
+          <p class="answer-box" id="answer-box"></p>
+        </main>
+        <div class="keyboard-box" id="keyboard-box"></div>
+        <!-- restart btns -->
+        <div class="btns">
+          <button class="next">Next</button>
+          <button class="restart">Restert</button>
+          <button class="menu-btn">Menu</button>
+        </div>
+        <!--  -->
+      </section>
+      <section class="score-box">
+        <div class="player-data">
+          <p>Chance : <span class="chance" id="chance">10</span></p>
+          <p>score : <span class="score" id="chance">0</span></p>
+        </div>
+        <div class="image-box">
+          <img
+            id="img-char"
+            src="https://th.bing.com/th/id/R.2b0f71d2a627e645e9e90e7626c364fc?rik=yC6ceBo5Q4OeoA&riu=http%3a%2f%2f38.media.tumblr.com%2f9090cb6cc02624bb48d5c165eaf45b4e%2ftumblr_nihkxyund01qiy96so1_250.gif&ehk=OphJFsqM70xUuwUtjIVH4Iyfv6hL62a20a0W13Ik9X0%3d&risl=&pid=ImgRaw&r=0"
+            alt="winner image"
+          />
+          <div class="close" id="close"></div>
+        </div>
+      </section>
+    </div>
+    <!--  -->
+    <div class="menu" id="menu">
+      <div class="cards-box">
+        <main data-catigory="football" class="card">
+          <div data-catigory="football" class="image-box">
+            <img
+              data-catigory="football"
+              src="./img/football.jpg"
+              alt="football"
+            />
+          </div>
+          <h3 class="title" data-catigory="football">Football</h3>
+        </main>
+        <main data-catigory="tennis" class="card">
+          <div data-catigory="tennis" class="image-box">
+            <img data-catigory="tennis" src="./img/tennis.jpg" alt="football" />
+          </div>
+          <h3 data-catigory="tennis" class="title">Tennis</h3>
+        </main>
+        <main data-catigory="marathon" class="card">
+          <div data-catigory="marathon" class="image-box">
+            <img
+              data-catigory="marathon"
+              src="./img/marathon.jpg"
+              alt="football"
+            />
+          </div>
+          <h3 data-catigory="marathon" class="title">Marathon</h3>
+        </main>
+      </div>
+      <button class="start">start</button>
+    </div>
+      <!-- <audio
+        id="mainAudio"
+        src="./sounds/gameGame.mp3"
+        loop="true"
+        autoplay
+      ></audio> -->
+    <script type="module" src="quetions.js"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

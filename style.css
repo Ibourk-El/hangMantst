@@ -1,0 +1,315 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+:root {
+  --border-color: #aaa;
+  --box-color: #eee;
+}
+body {
+  background-image: url(./img/bg2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.container {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+  position: relative;
+}
+
+.container .main-game {
+  width: 60%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  /* border: 5px solid #aaa; */
+  position: relative;
+}
+
+.main-game .quetion-box {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.main-game .quetion-box h2 {
+  margin: 10px;
+  padding: 10px;
+  color: #ccc;
+  background-color: #eeeeee00;
+  border-radius: 10px;
+  box-shadow: 0px 10px 5px 0px #000000;
+  border-top: 1px solid #fff;
+  margin: 20px 0;
+}
+.main-game .quetion-box .answer-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20%;
+}
+.main-game .quetion-box .answer-box .answer-letter {
+  padding: 10px;
+  color: white;
+  background-color: #eeeeee90;
+  margin: 0 2px;
+  font-size: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 4px #000000;
+  white-space: pre;
+}
+
+.main-game .keyboard-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 600px;
+  background-color: #eeeeee00;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.main-game .keyboard-box .letter {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 5px 10px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #eeeeee90;
+  margin: 3px;
+  text-align: center;
+  box-shadow: 5px 5px 10px 2px #000000;
+  cursor: pointer;
+  white-space: pre;
+  color: #ffffff;
+}
+
+.main-game .keyboard-box .letter.false {
+  background-color: #ff00005d;
+  box-shadow: 0px 0px 5px 2px #000000 inset;
+}
+.main-game .keyboard-box .letter.true {
+  background-color: #03f80352;
+  box-shadow: 0px 0px 5px 0px #000000 inset;
+}
+
+.container .score-box {
+  width: 40%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container .score-box .image-box {
+  max-width: 260px;
+  position: relative;
+  padding: 10px;
+  background-color: #eeeeee90;
+  height: 57%;
+}
+.image-box img {
+  width: 100%;
+  height: 100%;
+}
+
+.image-box .close {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--box-color);
+  top: 0;
+  left: 0;
+}
+
+.menu {
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: #ffffff90;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  transition: all 1s;
+  /* display: none; */
+}
+.cards-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.menu .card {
+  max-width: 250px;
+  margin: 10px;
+  text-align: center;
+  background-color: #eeeeee90;
+  padding: 10px;
+  border: 5px solid #aaaaaa90;
+  cursor: pointer;
+  box-shadow: 10px 10px 10px 5px #00000090;
+}
+.menu .card .image-box {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+.menu .card img {
+  width: 100%;
+  border-radius: 10px;
+  filter: grayscale();
+  transition: all 1s;
+}
+.menu .card h3 {
+  font-size: 25px;
+  margin: 10px 0;
+  color: #121212;
+}
+.menu .card.active img,
+.menu .card:hover img {
+  filter: grayscale(0);
+  transform: rotate(10deg) scale(1.4);
+}
+
+button {
+  padding: 9px 15px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #eee;
+  margin: 10px;
+  margin-top: 5%;
+  transition: 0.5s;
+}
+button:hover {
+  background-color: #ddd;
+  letter-spacing: 0.1em;
+}
+
+.start {
+  padding: 20px 30px;
+}
+
+/* main game  btns */
+
+.btns {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0%;
+  background-color: #ffffff90;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s;
+  overflow: hidden;
+}
+
+/* data player */
+
+.player-data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #eeeeee90;
+  width: 250px;
+  margin-bottom: 10px;
+  border: 3px solid var(--border-color);
+}
+.player-data {
+  padding: 10px;
+}
+
+@media (max-width: 860px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+  }
+  .container .main-game {
+    width: 100%;
+    height: 60%;
+  }
+  .main-game .keyboard-box .letter {
+    font-size: 16px;
+  }
+  .container .score-box {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    height: 40%;
+  }
+  .player-data {
+    flex-direction: column;
+    width: 30%;
+  }
+  .main-game .quetion-box h2 {
+    padding: 5px;
+    font-size: 16px;
+  }
+  .main-game .quetion-box .answer-box .answer-letter {
+    padding: 6px 10px;
+  }
+  .main-game .quetion-box .answer-box {
+    margin: 10px;
+  }
+  .cards-box{
+    margin: 2px 0;
+  
+    }
+}
+
+@media (max-width: 540px){
+  .cards-box{
+  margin: 2px 0;
+
+  }
+  .menu .card{
+    width: 40%;
+    height: 40vmin;
+  }
+  .menu .card .image-box{
+    width: 100%;
+  }
+  .menu .card h3{
+    font-size: 18px;
+    margin: 5px;
+  }
+  .start{
+    padding: 10px;
+  }
+
+}
+
+@media (max-width: 338px){
+  .main-game .keyboard-box .letter {
+    padding: 8px;
+    border-radius: 5px;
+    margin: 1px;
+  }
+
+}
