@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/c8a10d6071.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
@@ -39,6 +43,10 @@
     </div>
     <!--  -->
     <div class="menu" id="menu">
+      <div class="musicIcon">
+        <i class="fa-solid fa-music"></i>
+        <span class="slash"></span>
+      </div>
       <h2 class="hang-man">HangMan</h2>
       <p>Click on the Card To chose a catigory</p>
       <div class="cards-box">
@@ -84,8 +92,7 @@
     <audio
       id="mainAudio"
       src="./sounds/gameGame.mp3"
-      loop="true"
-      autoplay
+      loop
     ></audio>
     <script type="module" src="quetions.js"></script>
     <script type="module" src="script.js"></script>

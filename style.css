@@ -317,6 +317,30 @@ button:hover {
   animation: ballMove 10s 8s linear infinite;
 } */
 
+.musicIcon{
+  position: absolute;
+  top:80%;
+  left: 5%;
+  border: 2px solid #eee;
+}
+.musicIcon i{
+  padding: 10px;
+  font-size: 30px;
+}
+.musicIcon .slash.active{
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% ,0%) rotate(45deg);
+}
+.musicIcon .slash{
+  display: none;
+}
+
 @media (max-width: 860px) {
   .container {
     width: 100%;

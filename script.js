@@ -210,3 +210,22 @@ function playSound(audioName) {
   let audio = new Audio(audioName);
   audio.play();
 }
+
+// playSound("./sounds/gameGame.mp3",true)
+
+// sound
+let soundIcon = document.querySelector(".musicIcon");
+let slash = document.querySelector(".slash");
+let MainSound = document.querySelector("#mainAudio");
+MainSound.play();
+let playMusic = false;
+soundIcon.addEventListener("click", () => {
+  slash.classList.toggle("active");
+  if (playMusic) {
+    MainSound.play();
+    playMusic = false;
+  } else {
+    MainSound.pause();
+    playMusic = true;
+  }
+});
