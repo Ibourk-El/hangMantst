@@ -148,10 +148,18 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  backdrop-filter: blur(10px);
   overflow: hidden;
   transition: all 1s;
-  /* display: none; */
+  background-size: cover;
+  backdrop-filter: blur(10px);
+}
+.hang-man{
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+.menu p{
+  color: #333333;
+
 }
 .cards-box {
   width: 100%;
@@ -245,6 +253,69 @@ button:hover {
 .player-data p {
   padding: 10px;
 }
+
+/* ball move */
+
+.ball{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background-color: red;
+  border-radius:50% ;
+  z-index: -1;
+  animation: ballMove 10s linear infinite;
+}
+@keyframes ballMove {
+  0%,100%{top: 0;left: 0;
+  background-color: blue;
+  }
+  10%{top: 100%;left: 20%;
+  background-color: red;
+  }
+  20%{top: 0%;left: 40%;
+  background-color: green;
+    
+  }
+  30%{top: 100%;left: 60%;
+  background-color:blueviolet;
+
+  }
+  40%{top: 0%;left: 80%;
+    background-color: orange;
+  }
+  50%{top: 100%;left:100%;
+    background-color: rgb(255, 0, 191);
+  }
+  75%{top: 0%;left:50%;
+    background-color: rgb(200, 255, 0);}
+  90%{top: 100%;left:0%;
+    background-color: rgb(0, 204, 255);
+  }
+
+}
+.balls .ball:nth-child(2){
+  animation: ballMove 10s 1s linear infinite;
+}
+.balls .ball:nth-child(3){
+  animation: ballMove 10s 2s linear infinite;
+}
+.balls .ball:nth-child(4){
+  animation: ballMove 10s 3s linear infinite;
+}
+.balls .ball:nth-child(5){
+  animation: ballMove 10s 5s linear infinite;
+}
+.balls .ball:nth-child(6){
+  animation: ballMove 10s 6s linear infinite;
+}
+.balls .ball:nth-child(7){
+  animation: ballMove 10s 7s linear infinite;
+}
+/* .balls .ball:nth-child(8){
+  animation: ballMove 10s 8s linear infinite;
+} */
 
 @media (max-width: 860px) {
   .container {
