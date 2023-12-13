@@ -4,7 +4,6 @@ export let quetions = {
       gif: "./img/football.gif",
       img: "./img/football.png",
       bg:"./img/bg2.jpg",
-      sound:"Ronaldo-suii-1.mp3"
     },
     {
       question: "Who won the 2022 FIFA World Cup?",
@@ -55,7 +54,6 @@ export let quetions = {
       gif: "./img/tennis.gif",
       img: "./img/tennis.png",
       bg:"./img/bg2.jpg",
-      sound:"Ronaldo-suii-1.mp3"
     },
     {
       question:
@@ -110,15 +108,10 @@ export let quetions = {
       gif: "./img/marathonrun.gif",
       img: "./img/marathon.jpg",
       bg:"./img/bg2.jpg",
-      sound:"Ronaldo-suii-1.mp3"
     },
     {
       question: "In which city is the Boston Marathon held annually?",
       answer: "Boston",
-    },
-    {
-      question: "What is the standard marathon distance in kilometers?",
-      answer: "42.195",
     },
     {
       question: "Who won the men's marathon at the 2021 Tokyo Olympics?",

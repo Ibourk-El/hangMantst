@@ -66,7 +66,7 @@ body {
   margin: 0 2px;
   font-size: 20px;
   border-radius: 10px;
-  box-shadow: 5px 5px 10px 4px #000000;
+  box-shadow: 5px 10px  #000000;
   white-space: pre;
 }
 
@@ -90,7 +90,7 @@ body {
   background-color: #eeeeee90;
   margin: 3px;
   text-align: center;
-  box-shadow: 5px 5px 10px 2px #000000;
+  box-shadow: 5px 5px #000000;
   cursor: pointer;
   white-space: pre;
   color: #ffffff;
@@ -98,11 +98,11 @@ body {
 
 .main-game .keyboard-box .letter.false {
   background-color: #ff00005d;
-  box-shadow: 0px 0px 5px 2px #000000 inset;
+  box-shadow: 0px 0px #00000000;
 }
 .main-game .keyboard-box .letter.true {
   background-color: #03f80352;
-  box-shadow: 0px 0px 5px 0px #000000 inset;
+  box-shadow: 0px 0px #00000000;
 }
 
 .container .score-box {
@@ -130,7 +130,9 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: var(--box-color);
+  /* background-color: var(--box-color); */
+  background-image: linear-gradient(to bottom, blue, skyblue);
+  transition: height 1s;
   top: 0;
   left: 0;
 }
@@ -205,6 +207,7 @@ button {
 button:hover {
   background-color: #ddd;
   letter-spacing: 0.1em;
+  box-shadow: 5px 5px;
 }
 
 .start {
@@ -237,9 +240,9 @@ button:hover {
   background-color: #eeeeee90;
   width: 250px;
   margin-bottom: 10px;
-  border: 3px solid var(--border-color);
+  /* border: 3px solid var(--border-color); */
 }
-.player-data {
+.player-data p {
   padding: 10px;
 }
 
@@ -277,39 +280,35 @@ button:hover {
   .main-game .quetion-box .answer-box {
     margin: 10px;
   }
-  .cards-box{
+  .cards-box {
     margin: 2px 0;
-  
-    }
+  }
 }
 
-@media (max-width: 540px){
-  .cards-box{
-  margin: 2px 0;
-
+@media (max-width: 540px) {
+  .cards-box {
+    margin: 2px 0;
   }
-  .menu .card{
+  .menu .card {
     width: 40%;
     height: 40vmin;
   }
-  .menu .card .image-box{
+  .menu .card .image-box {
     width: 100%;
   }
-  .menu .card h3{
+  .menu .card h3 {
     font-size: 18px;
     margin: 5px;
   }
-  .start{
+  .start {
     padding: 10px;
   }
-
 }
 
-@media (max-width: 338px){
+@media (max-width: 338px) {
   .main-game .keyboard-box .letter {
     padding: 8px;
     border-radius: 5px;
     margin: 1px;
   }
-
 }

@@ -188,11 +188,12 @@ function toTheNextQuetion(hOfC) {
 function resetVars() {
   catigoryQuetion = quetions[catigory];
   quetionBox.innerHTML = catigoryQuetion[questionIndex].question;
-  chance = 10;
   porsontge = 100 / catigoryQuetion[questionIndex].answer.length;
   porsontge += 0.01;
   removeThCloser(heightOfCloser);
-
+  // reset chence
+  chance = 10;
+  chanceEl.innerHTML = chance;
   // reset answer Box
   answerBox.innerHTML = "";
   pushLettersToBox(
