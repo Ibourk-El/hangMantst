@@ -139,7 +139,6 @@ function checkIfLetterInAnsewr(answer, char) {
       answerBox.children[i].innerHTML = answer[i];
       isFinedIt = true;
       heightOfCloser -= porsontge;
-      console.log(heightOfCloser, porsontge, "x");
       removeThCloser(heightOfCloser);
     }
   }
@@ -150,11 +149,9 @@ function lose(x) {
   if (x == 0) {
     btnsMenu.style.height = "100%";
     nextBtn.style.display = "none";
-
     playSound("./sounds/error.wav");
+    winWord("You Can Do It <br> Try Agan");
     removeThCloser(catigoryQuetion);
-  } else {
-    console.log(x);
   }
 }
 
@@ -173,11 +170,21 @@ function toTheNextQuetion(hOfC) {
       imgChar.src = quetions[catigory][0].gif;
       heightOfCloser = 0;
       playSound("./sounds/win.mp3");
+      winWord(
+        "You are genius <br> <span> click on the next to continue</span>"
+      );
       resetVars();
     } else {
+      // end catigory logic
       btnsMenu.style.height = "100%";
       nextBtn.style.display = "none";
+      imgChar.src = quetions[catigory][0].gif;
+      heightOfCloser = 0;
       removeThCloser(0);
+      winWord(
+        "congratulations You are End this catigory <br> <span> click on the menu btn to chose new catigory</span>"
+      );
+      playSound("./sounds/crowd.mp3");
       questionIndex = 1;
     }
   } else {
@@ -209,6 +216,11 @@ function resetVars() {
 function playSound(audioName) {
   let audio = new Audio(audioName);
   audio.play();
+}
+
+function winWord(w) {
+  let winWord = document.getElementById("win-word");
+  winWord.innerHTML = w;
 }
 
 // playSound("./sounds/gameGame.mp3",true)

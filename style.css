@@ -46,8 +46,8 @@ body {
 .main-game .quetion-box h2 {
   margin: 10px;
   padding: 10px;
-  color: #ccc;
-  background-color: #eeeeee00;
+  color: #fff;
+  background-color: #00000040;
   border-radius: 10px;
   box-shadow: 0px 10px 5px 0px #000000;
   border-top: 1px solid #fff;
@@ -235,8 +235,18 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   transition: all 1s;
   overflow: hidden;
+}
+.btns .win-part{
+  margin-bottom: 20px;
+  text-align: center;
+}
+.btns .win-part span{
+  font-size: 16px;
+  font-weight: 300;
+  color: #444;
 }
 
 /* data player */
